@@ -6,7 +6,9 @@
 
 Charlotte cars is a web-application that converts customer’s monotonous driving experience into something more exciting. This website is for the people who enjoy their car drives and love the change. Having the same car for years can be boring and this application enables users to swap cars to their likings.
 
-![GitHub Logo](/client/src/img/signupPage.png)
+![GitHub Logo](/resources/carCategories.png)
+
+![GitHub Logo](/resources/carSwap.png)
 
 ### What you need to run this code
 
