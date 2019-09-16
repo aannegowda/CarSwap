@@ -1,0 +1,16 @@
+<nav class="user-nav" id="userNav">
+	<ul>
+		<% if(loginFlag) { %>
+		        <li><a href="/myItems?action=signOut">Sign Out</a></li>
+		<% } else { %>
+		        <li><a href="/login">Sign In</a></li>
+
+		<% } %>
+		<li><h3>|</h3></li>
+		<li><a href="/myItems">My Cars</a></li>
+		<li><h3>|</h3></li>
+		<li><a href="/mySwaps">My Swaps</a></li>
+		<li><h3>|</h3></li>
+		<li><a href="/index">Cart</a></li>
+	</ul>
+</nav>

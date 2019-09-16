@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li>Home</li>
+					</ul>
+				</div>
+				<article id="home-content">
+					<h2 class="content-header">Bored of your same old car?<br>OR<br>Does your car do not fit all your needs?</h2><br>
+					<p class="content-para">Life is way too short to use the same car for years!
+						You are not alone in this ride. Many are waiting to swap their cars.<br>Your car could fit their needs better.
+						You never know!<br><br>What are you waiting for?
+						Just browse through our categories, select your model to swap with our available cars and contact us.<br>
+						It is as simple as that!!</p>
+				</article>
+				<h3>Choose your best fit car from our categories!</h3><br>
+				<img src="/resources/carsImage.png" alt="carsImage">
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

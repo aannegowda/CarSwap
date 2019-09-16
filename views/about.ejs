@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li>About</li>
+					</ul>
+				</div>
+				<article id="home-content">
+					<h2 class="content-header">About Us</h2><br>
+					<p class="content-para">Established on August 25, 2018, we build a bridge between people looking to swap their cars. Our customers are more than happy with our services. We are hoping to expand our stores soon!</p>
+				</article>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

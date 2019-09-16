@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li><a href="/categories">Categories</a></li>
+						<li><a href="/item">Item</a></li>
+						<li>Rating</li>
+					</ul>
+				</div>
+				<div id="rateItemDisplay">
+					<div id="rateItemHeader">
+						<h1><%= item.itemName %></h1>
+						<label>Category: <%= item.catalogCategory %></label>
+					</div><br>
+					<div id="rateImage">
+						<img src="<%= item.imageURL %>" alt="camry">
+					</div><br>
+					<div id="rateItemDetails">
+						<div id="starHolder">
+							<span><h1>Rate this item:</h1></span><br>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+						</div>
+					</div><br>
+					<button class="btn buttons" id="cancelRatingBtn" onclick="window.location.href='/categories?itemCode=<%= item.itemCode %>'">
+						<span>Cancel</span>
+					</button>
+					<button class="btn buttons" id="ratingConfirmBtn" onclick="window.location.href='/categories?itemCode=<%= item.itemCode %>'">
+						<span>Submit Rating</span>
+					</button>
+				</div>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

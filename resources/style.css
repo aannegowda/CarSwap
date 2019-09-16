@@ -1,0 +1,507 @@
+/*Style sheet*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	border: gray;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+/*header styling*/
+#header {
+	height: 130px;
+}
+
+header #logo {
+	width: 100px;
+	height: 200px;
+	float: left;
+}
+
+header #header-space {
+	height: 190px;
+	background-color: #4d4d4d;
+}
+
+header #login-name-holder {
+	float: right;
+	padding-right: 10px;
+	padding-top: 10px;
+	color: white;
+}
+
+/*navigation bar styling*/
+.user-nav {
+	margin-top: 3px;
+	margin-left: 3px;
+	height: 50px;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+#userNav a {
+	color: #ffffff;
+	text-decoration:  none;
+	font-size: 24px;
+}
+
+#userNav ul {
+	clear: left;
+	float: left;
+	text-align: center;
+	left: 20%;
+	position: relative;
+	list-style: none;
+}
+
+#userNav li {
+	float: left;
+	display: inline;
+	padding: 0 30px 0 0;
+}
+
+#userNav a:hover {
+	cursor: pointer;
+	color: #ff6600;
+}
+
+/*main container styling*/
+main {
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+
+/*site navigation panel styling*/
+.site-nav-panel {
+	margin-top: 2px;
+	margin-left: 2px;
+	width: 18%;
+	min-width: 283px;
+	height: 600px;
+	float: left;
+	background-color: #737373;
+}
+
+#siteNav a {
+	color: white;
+	text-decoration:  none;
+	font-size: 24px;
+}
+
+#siteNav ul {
+	clear: left;
+	float: left;
+	margin-top: 20px;
+	text-align: left;
+	left: 10%;
+	position: relative;
+	list-style-type: none;
+}
+
+#siteNav li {
+	padding: 10px 0 0 0;
+}
+
+#siteNav a:hover {
+	cursor: pointer;
+	color: #00e600;
+}
+
+
+
+/*main content styling*/
+.main-content {
+	margin-top: 2px;
+	width: 80%;
+	min-width: 900px;
+	height: 600px;
+	float: right;
+	background-color: #cccccc;
+}
+
+footer {
+	margin-top: 606px;
+	margin-left: 2px;
+	height: 40px;
+	background-color: #999999;
+}
+
+footer p {
+	clear: left;
+	float: left;
+	color: white;
+	padding: 10px 0 0 0;
+	left: 30px;
+	position: relative;
+}
+
+/*main content styling*/
+section article {
+	margin-left: 10%;
+	margin-top: 20px;
+}
+
+.content-header {
+	margin-top: 30px;
+	font-style: italic;
+	font-size: xx-large;
+}
+
+.content-para {
+	font-size: larger;
+}
+
+#itemDisplay {
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+#itemDetails {
+	position: absolute;
+	left: 50%;
+	top: 280px;
+}
+
+#itemDetails h1 {
+	font-size: 30px;
+}
+
+#itemDetails h3 {
+	font-size: 20px;
+}
+
+.btn {
+	width: 200px;
+	height: 38px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:solid;
+	background-color: #f2f2f2;
+	font-size: 18px;
+}
+
+.btn:hover {
+	cursor: pointer;
+	color: #ffe0cc;
+}
+
+#swapBtn {
+	margin-top: 40px;
+	background-color: #f2e6d9;
+}
+
+#rateBtn {
+	margin-top: 26px;
+	background-color: #f2e6d9;
+}
+
+#swapBtn span{
+	color: black;
+}
+
+#rateBtn span {
+	color: black;
+}
+
+#swapBtn img {
+	position: absolute;
+	left: 10px;
+	top: 110px;
+	width: 30px;
+}
+
+#rateBtn img {
+	position: absolute;
+	left: 10px;
+	top: 174px;
+	width: 30px;
+}
+
+#itemDesc{
+	position: absolute;
+	left: 10%;
+	top: 565px;
+}
+
+#itemDesc p{
+	font-size: larger;
+}
+
+#itemsTable {
+	width: 97%;
+	margin-top: 8%;
+	margin-left: 28px;
+	border-collapse: collapse;
+}
+
+#itemsTable th, td{
+	padding: 15px;
+	text-align: left;
+	font-size: 20px;
+}
+
+#itemsTable tr{
+	background-color: #f2f2f2;
+}
+
+#itemsTable th {
+	background-color: #666666;
+	color: white;
+}
+
+#itemsTable a{
+	color: #cc3300;
+}
+
+.tableBtn {
+	width: 200px;
+	height: 38px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border:solid;
+	background-color: #f5d6d6;
+	font-size: 18px;
+}
+
+.tableBtn:hover{
+	cursor: pointer;
+	color: #ff6633;
+}
+
+#itemsTable a:hover{
+	cursor: pointer;
+	color: #ff6633;
+}
+
+#breadcrumb{
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#breadcrumb ul{
+	list-style: none;
+}
+
+#breadcrumb li{
+	font-size: 17px;
+	display: inline;
+}
+
+#breadcrumb a{
+  text-decoration: none;
+	color: black;
+}
+
+#breadcrumb li+li:before {
+	padding: 5px;
+	color: black;
+	content: ">\00a0";
+}
+
+#breadcrumb li a:hover {
+	text-decoration: underline;
+	color: #3399ff;
+}
+
+.checked {
+	color: #ffaa00;
+}
+
+#itemsTable img{
+	padding-left: 18px;
+	width: 40px;
+	height: 40px;
+}
+
+#legend{
+	margin-top: 10%;
+	margin-left: 10px;
+}
+
+#legend img{
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+section img{
+	margin-top: 5px;
+	margin-left: 10%;
+}
+
+section h3{
+	margin-top: 30px;
+	margin-left: 10%;
+	font-size: 20px;
+	color: #cc2900;
+}
+
+#backBtn {
+	position: absolute;
+	float: right;
+	top: 260px;
+	right: 100px;
+	background-color: #f2e6d9;
+}
+
+#backBtn span{
+	color: black;
+}
+
+#swapItemDesc{
+	position: absolute;
+	width: 700px;
+	height: 400px;
+	left: 39%;
+	top: 400px;
+}
+
+#swapItemDesc p{
+	font-size: 18px;
+}
+
+.caption{
+	margin-top: 8px;
+	margin-left: 30px;
+	font-size: 20px;
+}
+
+#swapHeaderTwo{
+	font-size: 20px;
+	position: absolute;
+	left: 21%;
+	top: 610px;
+}
+
+#swapTable{
+	position: absolute;
+	top: 650px;
+	left: 21%;
+	width: 500px;
+}
+
+#swapTable tr td{
+	background-color: #f2f2f2;
+	border: 1px solid black;
+}
+
+#swapTable a{
+	color: #cc3300;
+}
+
+#swapConfirmBtn {
+	position: absolute;
+	top: 780px;
+	left: 30%;
+	background-color: #f2e6d9;
+}
+
+#swapConfirmBtn span{
+	color: black;
+}
+
+.categoryTable{
+	margin-top: 50px;
+	margin-left:20px;
+	width: 500px;
+}
+
+.categoryTable td{
+	background-color: #f2f2f2;
+	border: 1px solid black;
+}
+
+.categoryTable th{
+	font-size: 22px;
+	text-align: left;
+	background-color: #666666;
+	color: white;
+	height: 40px;
+}
+
+.categoryTable a{
+	color: #cc3300;
+}
+
+.categoryTable a:hover{
+	cursor: pointer;
+	color: #ff6633;
+}
+
+#msg{
+	position: absolute;
+	left: 65%;
+	top: 48%;
+	width: 300px;
+}
+
+#msg h3{
+	color: #e63900;
+}
+
+#loginBox input{
+	width: 300px;
+	height:30px;
+}
+
+#loginBox{
+	margin-top: 5%;
+	margin-left: 20%;
+}
+
+.buttons{
+	background-color: #f2e6d9;
+}
+
+.buttons span{
+	color: black; 
+}
+
+#registerBox{
+	margin-top: 1%;
+	margin-left: 20%;
+}
+
+#registerBox input{
+	margin-left: 10px;
+	margin-right: 55%;
+	width: 300px;
+	height:30px;
+	float: right;
+}
+
+.successMsg{
+	color: #2eb82e;
+}
+
+#rateItemDisplay{
+	margin-left: 20%;
+	margin-top: 5px;
+}
+
+#rateItemDetails{
+	margin-left: 20%;
+}
+
+#ratingConfirmBtn{
+	margin-left: 10px;
+}
+
+#cancelRatingBtn{
+	margin-left: 10%;
+}
+
+#rateItemHeader{
+	margin-left: 22%;
+}

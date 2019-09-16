@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li><a href="/categories">Categories</a></li>
+						<li>Item</li>
+					</ul>
+				</div>
+				<div id="itemDisplay">
+					<img src="<%= item.imageURL %>" alt="camry">
+				</div>
+				<div id="itemDetails">
+					<div id="itemHeader">
+						<h1><%= item.itemName %></h1>
+						<label>Category: <%= item.catalogCategory %></label>
+					</div>
+					<div id="ratingHolder">
+						<span>Average rating:</span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</div>
+					<button class="btn" id="swapBtn" onclick="window.location.href='/myItems?action=offer&itemCode=<%= item.itemCode %>'">
+						<img src="/resources/swapIcon.png" id="swap" alt="swapIcon">
+						<span>Swap it</span>
+					</button><br>
+					<button class="btn" id="rateBtn" onclick="window.location.href='/rating?itemCode=<%= item.itemCode %>'">
+						<img src="/resources/ratingIcon.png" id="rating" alt="ratingIcon">
+						<span>Rate it</span>
+					</button>
+				</div>
+				<div id="msg">
+						<% if(msg != ""){ %>
+							<span><h3><%= msg %></h3></span>
+						<% } %>	
+				</div>
+				<button class="btn" id="backBtn" onclick="window.location.href='/categories'">
+					<span>Back to Categories</span>
+				</button>
+				<article id="itemDesc">
+					<p><%= item.description %></p>
+				</article>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

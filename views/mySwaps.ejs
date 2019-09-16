@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div class="caption"><h1>Charlotte's Swap Offers</h1></div>
+				<table id="itemsTable">
+					<tr>
+						<th>Car</th>
+						<th>Swap Offer</th>
+						<th></th>
+					</tr>
+					<% if(offerItems.length == 0) { %>
+						<h3>There are no pending swap items right now! Please initiate a swap.</h3>
+					<% } %>
+					<% for(var i=0; i< offerItems.length; i++){ %>
+						<tr>
+							<td><a href="/categories?itemCode=<%= offerItems[i].itemCodeOwn %>"><%= offerItems[i].itemCodeOwnName %></a></td>
+							<td><a href="/categories?itemCode=<%= offerItems[i].itemCodeWant %>"><%= offerItems[i].itemCodeWantName %></a></td>
+							<td>
+								<% if(offerItems[i].offerStatus === 'pending'){ %>
+									<button class="tableBtn" onclick="window.location.href='/myItems?action=accept&itemCode=<%= offerItems[i].itemCodeOwn %>'">Accept</button>
+									<button class="tableBtn" onclick="window.location.href='/myItems?action=reject&itemCode=<%= offerItems[i].itemCodeOwn %>'">Reject</button>
+									<% } else{ %>
+									<button class="tableBtn" onclick="window.location.href='/myItems?action=withdraw&itemCode=<%= offerItems[i].itemCodeOwn %>'">Withdraw swap</button>
+								<% } %>
+							</td>
+						</tr>
+					<% } %>
+				</table>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

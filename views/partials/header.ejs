@@ -1,0 +1,15 @@
+<header>
+	<div id="logo">
+		<img src="/resources/logo.jpg" alt="logo">
+	</div>
+	<div id="header-space">
+		<div id="login-name-holder">
+			<% if (userFName) {%>
+		        <h3>Welcome <%=userFName %>!</h3>
+			<% }else{%>
+			        <h3>Not signed in!</h3>
+			<%}%>
+		</div>
+	</div>
+</header>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Login</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li>Register</li>
+					</ul>
+				</div>
+				<% if(registerMsg) { %>
+					<h3><%= registerMsg %></h3>
+				<% } %>
+				<form method="POST" action="register">
+					<div id="registerBox">
+						<label>First Name</label>
+						<input type="text" name="firstName"><br><br>
+						<label>Last Name</label>
+						<input type="text" name="lastName"><br><br>
+						<label>Email</label>
+						<input type="text" name="email"><br><br>
+						<label>Password</label>
+						<input type="password" name="password"><br><br>
+						<label>Confirm Password</label>
+						<input type="password" name="confirmPassword"><br><br>
+						<label>Address line 1</label>
+						<input type="text" name="address1"><br><br>
+						<label>Address line 2</label>
+						<input type="text" name="address2"><br><br>
+						<label>City</label>
+						<input type="text" name="city"><br><br>
+						<label>State</label>
+						<input type="text" name="state"><br><br>
+						<label>Post Code</label>
+						<input type="text" name="postcode"><br><br>
+						<label>Country</label>
+						<input type="text" name="country"><br><br><br>
+						<button class="btn buttons" id="regCancelBtn" type="button" onclick="window.location.href='/login'">
+							<span>Cancel</span>
+						</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="btn buttons" id="registerBtn" type="submit">
+							<span>Register</span>
+						</button>
+					</div>
+				</form>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

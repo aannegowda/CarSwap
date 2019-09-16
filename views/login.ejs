@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Login</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li>Sign In</li>
+					</ul>
+				</div>
+				<% if(loginMsg){if(loginMsg == "registerSuccess"){ %>
+						<h3 class="successMsg">You have successfully registered. Please login to continue.</h3>
+					<% }else{ %>
+						<h3><%= loginMsg %></h3>
+				<% } } %>
+				<form method="POST" action="signIn">
+					<div id="loginBox">
+						<label>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="text" name="email"><br><br>
+						<label>Password&nbsp;&nbsp;</label>
+						<input type="password" name="password"><br><br>
+						<button class="btn buttons" id="signInBtn" type="submit">
+							<span>Sign in</span>
+						</button><br><br>
+						<h4>Don't have an account?</h4><a href="/register">Register</a>
+					</div>
+				</form>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Charlotte Cars | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="/resources/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<% include partials/header.ejs %>
+		<% include partials/user-navigation.ejs %>
+		<main>
+			<% include partials/site-navigation.ejs %>
+			<section id="main-content" class="main-content">
+				<div id="breadcrumb">
+					<ul>
+						<li><a href="/index">Home</a></li>
+						<li>Category</li>
+					</ul>
+				</div>
+		            <table class="categoryTable">
+		            	<% for(var i=0; i< categories.length; i++){ %>
+		                <thead>
+		                    <tr>
+		                        <th><%= categories[i] %></th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+		                    <%
+		                    for(var j=0; j< items.length;j++){
+		                        if(categories[i] === items[j].catalogCategory){ %>
+		                        <tr>
+		                            <td>
+		                            	<a href="/categories?itemCode=<%= items[j].itemCode %>"><%= items[j].itemName %></a>
+		                            </td>
+		                        </tr>
+		                       <% } }%>
+		                </tbody>
+		                <% } %>
+		            </table>
+			</section>
+		</main>
+		<% include partials/footer.ejs %>
+	</div>
+</body>
+</html>
